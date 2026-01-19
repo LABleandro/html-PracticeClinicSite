@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Imaging Center | Compassionate Diagnostics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Warm beige tones for backgrounds
+                        beige: {
+                            50: '#fcfaf8',
+                            100: '#f7f3ef',
+                            200: '#efe6dc',
+                            700: '#8c7a6b',
+                        },
+                        // Professional, calming green tones for primary text/accents
+                        emerald: {
+                            600: '#059669',
+                            800: '#065f46',
+                        },
+                        // Specific request: Teal for primary CTA to pop
+                        teal: {
+                            600: '#0d9488',
+                            700: '#0f766e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling for the whole page */
+        html { scroll-behavior: smooth; }
+        /* Simple transition for page fade-in */
+        .fade-in { animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-beige-50 text-gray-700 font-sans">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-beige-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="#" onclick="showPage('home'); return false;" class="flex items-center space-x-3 group">
+                    <div class="bg-emerald-100 p-2 rounded-full group-hover:bg-emerald-200 transition">
+                        <i class="fas fa-wave-square text-emerald-600 text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-semibold text-emerald-800">Clarity Imaging</span>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <button onclick="showPage('home')" class="nav-link font-medium text-gray-600 hover:text-emerald-600 transition">Home</button>
+                    <button onclick="showPage('services')" class="nav-link font-medium text-gray-600 hover:text-emerald-600 transition">Services & Treatments</button>
+                    <button onclick="showPage('faqs')" class="nav-link font-medium text-gray-600 hover:text-emerald-600 transition">Patient Resources & FAQ</button>
+                </nav>
+
+                <div class="hidden md:block">
+                    <button class="bg-teal-600 text-white px-6 py-3 rounded-lg font-bold shadow-md hover:bg-teal-700 hover:shadow-lg transition transform hover:-translate-y-0.5">
+                        <i class="far fa-calendar-check mr-2"></i>Book Appointment
+                    </button>
+                </div>
+
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-emerald-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content-area" class="min-h-screen fade-in">
+        </main>
+
+    <footer class="bg-emerald-800 text-beige-100 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-white">Clarity Imaging Center</h3>
+                <p>Providing clear answers and compassionate care through advanced diagnostic imaging.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4">Contact & Hours</h4>
+                <ul class="space-y-2">
+                    <li><i class="fas fa-map-marker-alt mr-2 opacity-75"></i> 123 Wellness Way, Suite 100</li>
+                    <li><i class="fas fa-phone mr-2 opacity-75"></i> (555) 123-4567</li>
+                    <li><i class="far fa-clock mr-2 opacity-75"></i> Mon-Fri: 7am - 7pm</li>
+                </ul>
+            </div>
+            <div>
+                 <h4 class="font-semibold text-white mb-4">Need Help?</h4>
+                 <p class="text-sm mb-4">For medical emergencies, always dial 911.</p>
+                 <button class="border-2 border-beige-200 text-beige-200 px-4 py-2 rounded hover:bg-beige-200 hover:text-emerald-800 transition">Patient Portal Login</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Page Content Templates ---
+
+        const homePageContent = `
+            <section class="relative bg-beige-100 py-20 lg:py-28 overflow-hidden">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative flex flex-col-reverse md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 z-10">
+                        <span class="text-emerald-600 font-semibold tracking-wider uppercase mb-4 block">Advanced Diagnostics. Human Touch.</span>
+                        <h1 class="text-4xl md:text-5xl font-bold text-emerald-800 leading-tight mb-6">
+                            Clear Answers for Your Health Journey.
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            We combine state-of-the-art ultrasound and imaging technology with a warm, calming environment. Our expert radiologists ensure you get fast, accurate results.
+                        </p>
+                        <button class="bg-teal-600 text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:bg-teal-700 transition text-lg">
+                            Book Your Visit Now
+                        </button>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="./images/RadiologistScansWPatient.png" 
+                             alt="Radiologist looking at scan with patient" class="rounded-3xl shadow-2xl object-cover h-[400px] w-full">
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-emerald-800 py-6">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-beige-100">
+                        <a href="#" class="flex items-center justify-center p-4 bg-emerald-700/50 rounded-lg hover:bg-emerald-700 transition">
+                            <i class="fas fa-stopwatch text-2xl mr-4 text-teal-300"></i>
+                            <div class="text-left">
+                                <p class="font-bold">Current Wait Times</p>
+                                <p class="text-sm opacity-90">Ultrasound: < 15 mins</p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center justify-center p-4 bg-emerald-700/50 rounded-lg hover:bg-emerald-700 transition">
+                            <i class="fas fa-route text-2xl mr-4 text-teal-300"></i>
+                            <div class="text-left">
+                                <p class="font-bold">Get Directions</p>
+                                <p class="text-sm opacity-90">Easy parking available</p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center justify-center p-4 bg-emerald-700/50 rounded-lg hover:bg-emerald-700 transition">
+                            <i class="fas fa-laptop-medical text-2xl mr-4 text-teal-300"></i>
+                            <div class="text-left">
+                                <p class="font-bold">Patient Portal</p>
+                                <p class="text-sm opacity-90">View results securely</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="max-w-4xl mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold text-emerald-800 mb-6">A Different Kind of Imaging Experience</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        We understand that medical testing can be stressful. That's why we've designed our center to be a calming oasis. From our comfortable waiting areas to our gentle, explain-as-we-go approach, your peace of mind is our priority.
+                    </p>
+                    <div class="h-1 w-24 bg-beige-200 mx-auto rounded-full"></div>
+                </div>
+            </section>
+        `;
+
+        const servicesPageContent = `
+             <section class="bg-beige-100 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl font-bold text-emerald-800 mb-6">Services & Treatments</h1>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600">Empowering you with knowledge. Our advanced imaging services provide the clarity needed for informed health decisions.</p>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-beige-50 p-8 rounded-2xl border border-beige-200 hover:shadow-xl hover:border-emerald-200 transition group">
+                            <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition">
+                                <i class="fas fa-baby text-3xl text-emerald-600 group-hover:text-white transition"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-emerald-800 mb-4">General & OB Ultrasound</h3>
+                            <p class="text-gray-600 mb-6">Safe, non-invasive imaging using sound waves. Perfect for expecting mothers and examining abdomen, pelvis, and vascular systems.</p>
+                            <a href="#" class="text-teal-600 font-semibold hover:underline">Learn More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+
+                        <div class="bg-beige-50 p-8 rounded-2xl border border-beige-200 hover:shadow-xl hover:border-emerald-200 transition group">
+                             <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition">
+                                <i class="fas fa-bone text-3xl text-emerald-600 group-hover:text-white transition"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-emerald-800 mb-4">Digital X-Ray</h3>
+                            <p class="text-gray-600 mb-6">Low-dose digital radiography for quick assessment of bones, chest, and joints with immediate image review.</p>
+                             <a href="#" class="text-teal-600 font-semibold hover:underline">Learn More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+
+                        <div class="bg-beige-50 p-8 rounded-2xl border border-beige-200 hover:shadow-xl hover:border-emerald-200 transition group">
+                             <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition">
+                                <i class="fas fa-ring text-3xl text-emerald-600 group-hover:text-white transition"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-emerald-800 mb-4">CT Scan (Computed Tomography)</h3>
+                            <p class="text-gray-600 mb-6">Detailed cross-sectional images of the body, essential for diagnosing complex internal conditions quickly.</p>
+                             <a href="#" class="text-teal-600 font-semibold hover:underline">Learn More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `;
+
+        const faqsPageContent = `
+            <section class="bg-beige-100 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl font-bold text-emerald-800 mb-6">Patient Resources & FAQs</h1>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600">We believe an informed patient is a calmer patient. Here are answers to common questions to help you prepare.</p>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="mb-6 border-b border-beige-200 pb-6">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-3 flex items-center">
+                            <i class="far fa-question-circle mr-3 text-teal-600"></i>
+                            How should I prepare for my Ultrasound?
+                        </h3>
+                        <p class="text-gray-600 ml-8 leading-relaxed">Preparation depends on the type of ultrasound. For abdominal exams, you may need to fast for 6-8 hours. For pelvic exams, a full bladder is often required. Our staff will provide specific instructions when you book.</p>
+                    </div>
+
+                    <div class="mb-6 border-b border-beige-200 pb-6">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-3 flex items-center">
+                            <i class="far fa-question-circle mr-3 text-teal-600"></i>
+                            When will my results be ready?
+                        </h3>
+                        <p class="text-gray-600 ml-8 leading-relaxed">In most cases, our on-site radiologist reviews images immediately. A final report is typically sent to your referring physician within 24 hours. You can also view your results via our Patient Portal once finalized.</p>
+                    </div>
+
+                    <div class="mb-6 border-b border-beige-200 pb-6">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-3 flex items-center">
+                            <i class="far fa-question-circle mr-3 text-teal-600"></i>
+                            Do you accept my insurance?
+                        </h3>
+                        <p class="text-gray-600 ml-8 leading-relaxed">We accept most major insurance plans. We recommend contacting our billing department or your insurance provider directly prior to your appointment to confirm coverage and any co-pays.</p>
+                    </div>
+                     <div class="mt-12 p-8 bg-beige-50 rounded-2xl text-center">
+                        <h4 class="text-xl font-semibold text-emerald-800 mb-4">Have more questions?</h4>
+                        <p class="text-gray-600 mb-6">Our compassionate team is ready to help reduce your anxiety.</p>
+                         <button class="text-teal-600 font-bold border-2 border-teal-600 px-6 py-2 rounded-full hover:bg-teal-50 transition">Contact Us Today</button>
+                    </div>
+                </div>
+            </section>
+        `;
+
+        // --- SPA Controller Functions ---
+
+        function showPage(pageId) {
+            const contentArea = document.getElementById('content-area');
+            
+            // Remove fade-in class to trigger restart of animation on next load
+            contentArea.classList.remove('fade-in');
+            
+            // 1. Update Content
+            let content = '';
+            switch(pageId) {
+                case 'home': content = homePageContent; break;
+                case 'services': content = servicesPageContent; break;
+                case 'faqs': content = faqsPageContent; break;
+                default: content = homePageContent;
+            }
+            
+            // Small timeout to allow animation reset
+            setTimeout(() => {
+                 contentArea.innerHTML = content;
+                 contentArea.classList.add('fade-in');
+                 window.scrollTo(0, 0); // Reset scroll position
+            }, 50);
+
+            // 2. Update Active Nav State (Optional but good UX)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-emerald-600');
+                link.classList.add('text-gray-600');
+                if(link.getAttribute('onclick').includes(pageId)) {
+                    link.classList.add('text-emerald-600');
+                    link.classList.remove('text-gray-600');
+                }
+            });
+        }
+
+        // Initialize the site with the homepage on load
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('home');
+        });
+
+    </script>
+</body>
+</html>
