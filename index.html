@@ -12,19 +12,16 @@
             theme: {
                 extend: {
                     colors: {
-                        // Warm beige tones for backgrounds
                         beige: {
                             50: '#fcfaf8',
                             100: '#f7f3ef',
                             200: '#efe6dc',
                             700: '#8c7a6b',
                         },
-                        // Professional, calming green tones for primary text/accents
                         emerald: {
                             600: '#059669',
                             800: '#065f46',
                         },
-                        // Specific request: Teal for primary CTA to pop
                         teal: {
                             600: '#0d9488',
                             700: '#0f766e',
@@ -38,9 +35,7 @@
         }
     </script>
     <style>
-        /* Smooth scrolling for the whole page */
         html { scroll-behavior: smooth; }
-        /* Simple transition for page fade-in */
         .fade-in { animation: fadeIn 0.3s ease-in; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
@@ -50,12 +45,14 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-beige-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
+                
                 <a href="#" onclick="showPage('home'); return false;" class="flex items-center space-x-3 group">
-                    <div class="bg-emerald-100 p-2 rounded-full group-hover:bg-emerald-200 transition">
-                        <i class="fas fa-wave-square text-emerald-600 text-xl"></i>
-                        
-                    </div>
-                    <span class="text-2xl font-semibold text-emerald-800">Caritas Diagnostic Imaging</span>
+                    <img src="./image/CaritasDILogo.jpeg" 
+                         alt="Caritas Diagnostic Imaging Logo" 
+                         class="h-14 w-auto rounded shadow-sm group-hover:opacity-90 transition duration-300">
+                    <span class="text-xl md:text-2xl font-semibold text-emerald-800 hidden sm:inline-block">
+                        Caritas Diagnostic Imaging
+                    </span>
                 </a>
 
                 <nav class="hidden md:flex items-center space-x-8">
@@ -95,8 +92,13 @@
 
     <footer class="bg-emerald-800 text-beige-100 py-12 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-xl font-semibold mb-4 text-white">Caritas Diagnostic Imaging</h3>
+            <div class="flex flex-col items-start">
+                <div class="flex items-center space-x-3 mb-4">
+                     <img src="./image/CaritasDILogo.jpeg" 
+                         alt="Caritas Logo" 
+                         class="h-10 w-auto rounded brightness-110">
+                    <h3 class="text-xl font-semibold text-white">Caritas Diagnostic Imaging</h3>
+                </div>
                 <p>Providing clear answers and compassionate care through advanced diagnostic imaging.</p>
             </div>
             <div>
@@ -116,8 +118,6 @@
     </footer>
 
     <script>
-        // --- Page Content Templates (Unchanged) ---
-
         const homePageContent = `
             <section class="relative bg-beige-100 py-20 lg:py-28 overflow-hidden">
                 <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
@@ -140,7 +140,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="bg-emerald-800 py-6">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-beige-100">
@@ -168,7 +167,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="py-20 bg-white">
                 <div class="max-w-4xl mx-auto px-4 text-center">
                     <h2 class="text-3xl font-bold text-emerald-800 mb-6">A Different Kind of Imaging Experience</h2>
@@ -187,7 +185,6 @@
                     <p class="max-w-3xl mx-auto text-lg text-gray-600">Empowering you with knowledge. Our advanced imaging services provide the clarity needed for informed health decisions.</p>
                 </div>
             </section>
-
             <section class="py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -199,7 +196,6 @@
                             <p class="text-gray-600 mb-6">Safe, non-invasive imaging using sound waves. Perfect for expecting mothers and examining abdomen, pelvis, and vascular systems.</p>
                             <a href="#" class="text-teal-600 font-semibold hover:underline">Learn More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
                         </div>
-
                         <div class="bg-beige-50 p-8 rounded-2xl border border-beige-200 hover:shadow-xl hover:border-emerald-200 transition group">
                              <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition">
                                 <i class="fas fa-bone text-3xl text-emerald-600 group-hover:text-white transition"></i>
@@ -208,7 +204,6 @@
                             <p class="text-gray-600 mb-6">Low-dose digital radiography for quick assessment of bones, chest, and joints with immediate image review.</p>
                              <a href="#" class="text-teal-600 font-semibold hover:underline">Learn More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
                         </div>
-
                         <div class="bg-beige-50 p-8 rounded-2xl border border-beige-200 hover:shadow-xl hover:border-emerald-200 transition group">
                              <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition">
                                 <i class="fas fa-ring text-3xl text-emerald-600 group-hover:text-white transition"></i>
@@ -229,7 +224,6 @@
                     <p class="max-w-3xl mx-auto text-lg text-gray-600">We believe an informed patient is a calmer patient. Here are answers to common questions to help you prepare.</p>
                 </div>
             </section>
-
             <section class="py-20 bg-white">
                 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="mb-6 border-b border-beige-200 pb-6">
@@ -237,49 +231,32 @@
                             <i class="far fa-question-circle mr-3 text-teal-600"></i>
                             How should I prepare for my Ultrasound?
                         </h3>
-                        <p class="text-gray-600 ml-8 leading-relaxed">Preparation depends on the type of ultrasound. For abdominal exams, you may need to fast for 6-8 hours. For pelvic exams, a full bladder is often required. Our staff will provide specific instructions when you book.</p>
+                        <p class="text-gray-600 ml-8 leading-relaxed">Preparation depends on the type of ultrasound. For abdominal exams, you may need to fast for 6-8 hours. For pelvic exams, a full bladder is often required.</p>
                     </div>
-
                     <div class="mb-6 border-b border-beige-200 pb-6">
                         <h3 class="text-xl font-bold text-emerald-800 mb-3 flex items-center">
                             <i class="far fa-question-circle mr-3 text-teal-600"></i>
                             When will my results be ready?
                         </h3>
-                        <p class="text-gray-600 ml-8 leading-relaxed">In most cases, our on-site radiologist reviews images immediately. A final report is typically sent to your referring physician within 24 hours. You can also view your results via our Patient Portal once finalized.</p>
-                    </div>
-
-                    <div class="mb-6 border-b border-beige-200 pb-6">
-                        <h3 class="text-xl font-bold text-emerald-800 mb-3 flex items-center">
-                            <i class="far fa-question-circle mr-3 text-teal-600"></i>
-                            Do you accept my insurance?
-                        </h3>
-                        <p class="text-gray-600 ml-8 leading-relaxed">We accept most major insurance plans. We recommend contacting our billing department or your insurance provider directly prior to your appointment to confirm coverage and any co-pays.</p>
+                        <p class="text-gray-600 ml-8 leading-relaxed">In most cases, our on-site radiologist reviews images immediately. A final report is typically sent to your referring physician within 24 hours.</p>
                     </div>
                      <div class="mt-12 p-8 bg-beige-50 rounded-2xl text-center">
                         <h4 class="text-xl font-semibold text-emerald-800 mb-4">Have more questions?</h4>
-                        <p class="text-gray-600 mb-6">Our compassionate team is ready to help reduce your anxiety.</p>
-                         <button class="text-teal-600 font-bold border-2 border-teal-600 px-6 py-2 rounded-full hover:bg-teal-50 transition">Contact Us Today</button>
+                        <button class="text-teal-600 font-bold border-2 border-teal-600 px-6 py-2 rounded-full hover:bg-teal-50 transition">Contact Us Today</button>
                     </div>
                 </div>
             </section>
         `;
 
-        // --- SPA Controller Functions ---
-
-        // New function to toggle mobile menu visibility
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         }
 
-
         function showPage(pageId) {
             const contentArea = document.getElementById('content-area');
-            
-            // Remove fade-in class to trigger restart of animation on next load
             contentArea.classList.remove('fade-in');
             
-            // 1. Update Content
             let content = '';
             switch(pageId) {
                 case 'home': content = homePageContent; break;
@@ -288,40 +265,21 @@
                 default: content = homePageContent;
             }
             
-            // Small timeout to allow animation reset
             setTimeout(() => {
                  contentArea.innerHTML = content;
                  contentArea.classList.add('fade-in');
-                 window.scrollTo(0, 0); // Reset scroll position
+                 window.scrollTo(0, 0);
             }, 50);
 
-            // 2. Update Active Nav State (for desktop links)
             document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('text-emerald-600');
-                link.classList.add('text-gray-600');
-                if(link.getAttribute('onclick').includes(pageId)) {
-                    link.classList.add('text-emerald-600');
-                    link.classList.remove('text-gray-600');
-                }
-            });
-            
-            // 3. Update Active Nav State (for mobile links)
-            document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                link.classList.remove('text-emerald-600', 'bg-beige-50');
-                link.classList.add('text-gray-600');
-                // Check if the onclick attribute contains the pageId string
-                if(link.getAttribute('onclick').includes(`'${pageId}'`)) {
-                    link.classList.add('text-emerald-600', 'bg-beige-50');
-                    link.classList.remove('text-gray-600');
-                }
+                link.classList.toggle('text-emerald-600', link.getAttribute('onclick').includes(pageId));
+                link.classList.toggle('text-gray-600', !link.getAttribute('onclick').includes(pageId));
             });
         }
 
-        // Initialize the site with the homepage on load
         document.addEventListener('DOMContentLoaded', () => {
             showPage('home');
         });
-
     </script>
 </body>
 </html>
