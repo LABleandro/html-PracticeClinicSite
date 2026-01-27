@@ -60,6 +60,9 @@
                     <button onclick="showPage('services')" class="nav-link font-medium text-gray-600 hover:text-emerald-600 transition">Services & Treatments</button>
                     <button onclick="showPage('faqs')" class="nav-link font-medium text-gray-600 hover:text-emerald-600 transition">Patient Resources & FAQ</button>
                 </nav>
+                <div class="clinicPhnNumber">
+                    
+                </div>
 
                 <div class="hidden md:block">
                     <button class="bg-teal-600 text-white px-6 py-3 rounded-lg font-bold shadow-md hover:bg-teal-700 hover:shadow-lg transition transform hover:-translate-y-0.5">
@@ -80,7 +83,7 @@
                 <button onclick="showPage('home'); toggleMobileMenu()" class="mobile-nav-link text-left font-medium text-lg text-gray-600 hover:text-emerald-600 py-2 border-b border-beige-100">Home</button>
                 <button onclick="showPage('services'); toggleMobileMenu()" class="mobile-nav-link text-left font-medium text-lg text-gray-600 hover:text-emerald-600 py-2 border-b border-beige-100">Services & Treatments</button>
                 <button onclick="showPage('faqs'); toggleMobileMenu()" class="mobile-nav-link text-left font-medium text-lg text-gray-600 hover:text-emerald-600 py-2 border-b border-beige-100">Patient Resources & FAQ</button>
-                <button class="bg-teal-600 text-white w-full py-3 rounded-lg font-bold shadow-md hover:bg-teal-700 transition mt-2">
+                <button id="bookOnline"class="bg-teal-600 text-white w-full py-3 rounded-lg font-bold shadow-md hover:bg-teal-700 transition mt-2">
                     <i class="far fa-calendar-check mr-2"></i>Book Appointment
                 </button>
             </div>
@@ -104,7 +107,7 @@
             <div>
                 <h4 class="font-semibold text-white mb-4">Contact & Hours</h4>
                 <ul class="space-y-2">
-                    <li><i class="fas fa-map-marker-alt mr-2 opacity-75"></i> Unit 105, 7609 - 109 St NW, <br>Edmonton, AB T6G 1C3</li>
+                    <li><a class="clinicAddress" href="geo:53.51269923963591, -113.51140863551153"><i class="fas fa-map-marker-alt mr-2 opacity-75"></i> Unit 105, 7609 - 109 St NW, <br>Edmonton, AB T6G 1C3</a></li>
                     <li><i class="fas fa-phone mr-2 opacity-75"></i> (555) 123-4567</li>
                     <li><i class="far fa-clock mr-2 opacity-75"></i> Mon-Fri: 7am - 7pm</li>
                 </ul>
@@ -112,7 +115,7 @@
             <div>
                  <h4 class="font-semibold text-white mb-4">Need Help?</h4>
                  <p class="text-sm mb-4">For medical emergencies, always dial 911.</p>
-                 <button class="border-2 border-beige-200 text-beige-200 px-4 py-2 rounded hover:bg-beige-200 hover:text-emerald-800 transition">Patient Portal Login</button>
+                 <!--<button class="border-2 border-beige-200 text-beige-200 px-4 py-2 rounded hover:bg-beige-200 hover:text-emerald-800 transition">Patient Portal Login</button>-->
             </div>
         </div>
     </footer>
@@ -130,7 +133,7 @@
                         <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                             We combine state-of-the-art ultrasound and imaging technology with a warm, calming environment. Our expert radiologists ensure you get fast, accurate results.
                         </p>
-                        <button class="bg-teal-600 text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:bg-teal-700 transition text-lg">
+                        <button id="bookOnline" class="bg-teal-600 text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:bg-teal-700 transition text-lg">
                             Book Your Visit Now
                         </button>
                     </div>
@@ -150,20 +153,20 @@
                                 <p class="text-sm opacity-90">Ultrasound: < 15 mins</p>
                             </div>
                         </a>
-                        <a href="#" class="flex items-center justify-center p-4 bg-emerald-700/50 rounded-lg hover:bg-emerald-700 transition">
+                        <a href="geo:53.51269923963591, -113.51140863551153" class="flex items-center justify-center p-4 bg-emerald-700/50 rounded-lg hover:bg-emerald-700 transition clinicAddress">
                             <i class="fas fa-route text-2xl mr-4 text-teal-300"></i>
                             <div class="text-left">
                                 <p class="font-bold">Get Directions</p>
                                 <p class="text-sm opacity-90">Easy parking available</p>
                             </div>
                         </a>
-                        <a href="#" class="flex items-center justify-center p-4 bg-emerald-700/50 rounded-lg hover:bg-emerald-700 transition">
+                        <!--<a href="#" class="flex items-center justify-center p-4 bg-emerald-700/50 rounded-lg hover:bg-emerald-700 transition">
                             <i class="fas fa-laptop-medical text-2xl mr-4 text-teal-300"></i>
                             <div class="text-left">
                                 <p class="font-bold">Patient Portal</p>
                                 <p class="text-sm opacity-90">View results securely</p>
                             </div>
-                        </a>
+                        </a>-->
                     </div>
                 </div>
             </section>
